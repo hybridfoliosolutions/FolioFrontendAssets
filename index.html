@@ -1,28 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hybridfolio Solutions</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(120deg, #141e30, #243b55);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    p { font-size: 1.2rem; opacity: 0.9; }
-  </style>
-</head>
-<body>
-  <h1>Welcome to Hybridfolio Solutions</h1>
-  <p>Corporate Gifting | Branding | Merchandise</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hybridfolio – Corporate Gifting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .parallax {
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .overlay {
+        background: rgba(0, 0, 0, 0.4);
+      }
+
+      .product-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.75rem;
+        height: 20rem;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      .product-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+      }
+
+      .product-card:hover img {
+        transform: scale(1.08);
+        opacity: 0.9;
+      }
+
+      .product-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 1rem;
+        text-align: center;
+        transition: background 0.3s ease;
+      }
+
+      .product-card:hover .product-overlay {
+        background: rgba(0, 0, 0, 0.75);
+      }
+
+      body {
+        background-color: #fdf7f2;
+      }
+    </style>
+  </head>
+
+  <body class="text-[#2D2D2D]">
+    <!-- Header -->
+    <header class="bg-[#FDF7F2]/90 backdrop-blur-md border-b border-[#E3B97F]/40 sticky top-0 z-50">
+      <nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
+        <h1 class="text-2xl font-bold text-[#8B2F2F]">Hybridfolio</h1>
+        <ul class="hidden md:flex gap-8 text-sm font-medium">
+          <li><a href="#about" class="hover:text-[#8B2F2F]">About</a></li>
+          <li><a href="#products" class="hover:text-[#8B2F2F]">Products</a></li>
+          <li><a href="#clients" class="hover:text-[#8B2F2F]">Clients</a></li>
+          <li><a href="#enquiry" class="hover:text-[#8B2F2F]">Enquiry</a></li>
+          <li><a href="#contact" class="hover:text-[#8B2F2F]">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="parallax min-h-screen flex items-center justify-center text-center text-white relative"
+      style="background-image: url('https://packmojo.com/blog/images/size/w2000/2021/03/designing-packaging-for-corporate-gifting.jpg');"
+    >
+      <div class="overlay absolute inset-0"></div>
+      <div class="relative z-10 px-4">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          Thoughtful Corporate Gifting
+        </h2>
+        <p class="text-lg max-w-2xl mx-auto mb-8">
+          We help businesses build lasting impressions through quality gifting,
+          branding, and experiences.
+        </p>
+        <a
+          href="#enquiry"
+          class="inline-block bg-[#8B2F2F] hover:bg-[#732626] text-white py-3 px-6 rounded-lg font-medium"
+          >Enquire Now</a
+        >
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 bg-[#FDF7F2] text-center">
+      <h2 class="text-3xl font-semibold text-[#8B2F2F] mb-4">About Us</h2>
+      <p class="max-w-3xl mx-auto text-gray-700 leading-relaxed text-lg">
+        At <strong>Hybridfolio Solutions</strong>, we curate high-quality,
+        branded corporate gifts — from apparel to lifestyle products. Whether
+        it’s employee recognition or brand events, our team ensures every
+        product speaks your brand’s language.
+      </p>
+    </section>
+
+    <!-- Parallax Section -->
+    <section
+      class="parallax min-h-[70vh] flex items-center justify-center text-white relative"
+      style="background-image: url('https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=1920&q=80');"
+    >
+      <div class="overlay absolute inset-0"></div>
+      <div class="relative z-10 text-center">
+        <h3 class="text-3xl md:text-4xl font-semibold text-[#FDF7F2]">
+          Welcome New Year with Premium Corporate Gifting
+        </h3>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="py-20 bg-[#FDF7F2]">
+      <h2 class="text-3xl font-semibold text-center text-[#8B2F2F] mb-10">
+        Our Products
+      </h2>
+      <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <!-- Branded T-Shirts -->
+        <div class="product-card">
+          <img
+            src="https://jucycorporategifts.com/cdn/shop/files/PoloBlack.png?v=1714115659&width=360"
+            alt="T-shirts"
+          />
+          <div class="product-overlay">
+            <h3 class="text-lg font-bold text-white">Branded T-Shirts</h3>
+            <p class="text-white text-sm">
+              Premium cotton T-shirts with custom logo embroidery or print.
+            </p>
+          </div>
+        </div>
+
+        <!-- Eco-Friendly Bottles -->
+        <div class="product-card">
+          <img
+            src="https://printitnice.com/wp-content/uploads/2024/01/8-1.webp"
+            alt="Bottles"
+          />
+          <div class="product-overlay">
+            <h3 class="text-lg font-bold text-white">Eco-Friendly Bottles</h3>
+            <p class="text-white text-sm">
+              Sustainable gifting that keeps your brand eco-conscious and
+              stylish.
+            </p>
+          </div>
+        </div>
+
+        <!-- Office Bags -->
+        <div class="product-card">
+          <img
+            src="https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/25007998/2023/10/31/cbc5579f-1af1-4698-bc87-fc133c9e241b1698729599563-Skybags-Unisex-LUMOUS-Backpack-2571698729599166-1.jpg"
+            alt="Bags"
+          />
+          <div class="product-overlay">
+            <h3 class="text-lg font-bold text-white">Office Bags</h3>
+            <p class="text-white text-sm">
+              Elegant, functional office bags that make a statement every day.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section id="clients" class="py-20 bg-[#FDF7F2] text-center">
+      <h2 class="text-3xl font-semibold text-[#8B2F2F] mb-10">Our Clients</h2>
+      <div class="flex flex-wrap justify-center items-center gap-12 max-w-4xl mx-auto">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+          alt="Amazon"
+          class="h-12"
+        />
+        <img
+          src="https://i.pinimg.com/736x/a5/1c/5e/a51c5e2deec1f6af447e0f7416bdd53e.jpg"
+          alt="Canara Bank"
+          class="h-12 rounded-md shadow-sm"
+        />
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/020/336/451/non_2x/infosys-logo-infosys-icon-free-free-vector.jpg"
+          alt="Infosys"
+          class="h-12 rounded-md shadow-sm"
+        />
+      </div>
+    </section>
+
+    <!-- Enquiry -->
+    <section id="enquiry" class="py-20 bg-[#FDF7F2]">
+      <h2 class="text-3xl font-semibold text-center text-[#8B2F2F] mb-10">
+        Enquiry Form
+      </h2>
+      <form
+        action="https://formspree.io/f/xldpvrwe"
+        method="POST"
+        class="max-w-xl mx-auto bg-white p-8 rounded-xl border border-[#E3B97F]/40 shadow-sm"
+      >
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-[#8B2F2F] mb-1">Name</label>
+          <input
+            type="text"
+            name="name"
+            required
+            class="w-full border border-[#E3B97F]/40 rounded-md p-2.5 focus:ring-2 focus:ring-[#8B2F2F]"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-[#8B2F2F] mb-1">Email</label>
+          <input
+            type="email"
+            name="email"
+            required
+            class="w-full border border-[#E3B97F]/40 rounded-md p-2.5 focus:ring-2 focus:ring-[#8B2F2F]"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-[#8B2F2F] mb-1"
+            >Requirement</label
+          >
+          <textarea
+            name="requirement"
+            rows="3"
+            placeholder="Eg. 100 T-shirts, 50 bottles"
+            class="w-full border border-[#E3B97F]/40 rounded-md p-2.5 focus:ring-2 focus:ring-[#8B2F2F]"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-[#8B2F2F] hover:bg-[#732626] text-white py-3 rounded-md font-medium transition duration-300"
+        >
+          Submit Enquiry
+        </button>
+      </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-[#fdf7f2] text-center border-t border-[#E3B97F]/40">
+      <h2 class="text-3xl font-semibold text-[#8B2F2F] mb-6">Contact Us</h2>
+      <p class="max-w-3xl mx-auto text-gray-700 leading-relaxed mb-8 text-lg">
+        If you have any questions, concerns, or feedback regarding our website
+        or services, please do not hesitate to reach out to us. We are here to
+        assist you and ensure you have the best possible experience.
+      </p>
+      <div class="text-gray-800 space-y-2 text-lg">
+        <p><strong>Email:</strong> hybridfoliosolutions@gmail.com</p>
+        <p><strong>Phone:</strong> +91 7093833749</p>
+        <p><strong>Mailing Address:</strong></p>
+        <p>
+          FLAT NO- 210, PRIME BUILDING, SHANKARAPALLI ROAD,<br />
+          MOKILA, HYDERABAD, TELANGANA, 501203
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#8B2F2F] text-[#FDF7F2] py-6 text-center">
+      <p class="text-sm">© 2025 Hybridfolio Solutions. All Rights Reserved.</p>
+    </footer>
+  </body>
 </html>
